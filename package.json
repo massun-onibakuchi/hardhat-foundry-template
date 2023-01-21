@@ -8,13 +8,13 @@
     "test:forge": "forge test -vvv",
     "doc": "forge doc",
     "type": "hardhat typechain",
-    "lint:check": "prettier --check **.sol && prettier --check **.js && prettier --check **.ts && hardhat compile",
-    "lint:fix": "prettier --write **.sol && prettier --write **.js && prettier --write **.ts",
+    "lint:check": "prettier --check '**.{sol,js,ts}' && hardhat compile",
+    "lint:fix": "prettier --write '**.{sol,js,ts}'",
     "prepare": "husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/primitivefinance/hardhat-foundry.git"
+    "url": "git+https://github.com/massun-onibakuchi/hardhat-foundry-template/"
   },
   "keywords": [
     "hardhat",
@@ -23,12 +23,11 @@
   ],
   "author": "0xbakuchi",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/primitivefinance/hardhat-foundry#readme",
+  "homepage": "https://github.com/massun-onibakuchi/hardhat-foundry-template/#readme",
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
-    "@nomicfoundation/hardhat-foundry": "^1.0.0",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.7",
     "@nomiclabs/hardhat-ethers": "^2.2.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.5",

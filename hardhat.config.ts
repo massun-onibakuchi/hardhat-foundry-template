@@ -2,7 +2,6 @@ import * as dotenv from 'dotenv'
 
 import '@nomicfoundation/hardhat-toolbox'
 import { HardhatUserConfig } from 'hardhat/types'
-import '@nomicfoundation/hardhat-foundry'
 
 dotenv.config()
 
