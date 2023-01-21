@@ -1,0 +1,24 @@
+# your can use the init-foundry task to create a foundry.toml file.
+# The file will be created using the proper values to make Foundry work well with your Hardhat project.
+
+[profile.default]
+via_ir = true
+src = 'src'
+out = 'out'
+libs = ['lib', 'node_modules']
+test = 'test/foundry'
+remappings = [
+    'ds-test=lib/ds-test/src/',
+    'forge-std=lib/forge-std/src/',
+    'contracts/=contracts/',
+]
+optimizer_runs = 15000
+fuzz_runs = 7500
+
+[rpc_endpoints]
+# This section lives outside of profiles and defines a table of RPC endpoints, where the key specifies the RPC endpoints's name and the value is the RPC endpoint itself.
+# The value can either be a valid RPC endpoint or a reference to an environment variable (wrapped with in ${}).
+# These RPC endpoints can be used in tests and Solidity scripts 
+mainnet = "${RPC_URL}"
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config
