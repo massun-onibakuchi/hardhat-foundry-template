@@ -2,6 +2,8 @@ import * as dotenv from 'dotenv'
 
 import '@nomicfoundation/hardhat-toolbox'
 import { HardhatUserConfig } from 'hardhat/types'
+// it will be able to use dependencies installed with forge install
+import '@nomicfoundation/hardhat-foundry'
 
 dotenv.config()
 
