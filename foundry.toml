@@ -2,7 +2,6 @@
 # The file will be created using the proper values to make Foundry work well with your Hardhat project.
 
 [profile.default]
-via_ir = true
 src = 'src'
 out = 'out'
 libs = ['lib', 'node_modules']
@@ -10,10 +9,12 @@ test = 'test/foundry'
 remappings = [
     'ds-test=lib/ds-test/src/',
     'forge-std=lib/forge-std/src/',
-    'contracts/=contracts/',
+    "@openzeppelin/=lib/openzeppelin-contracts/",
 ]
 optimizer_runs = 15000
-fuzz_runs = 7500
+
+[fuzz]
+runs = 1000
 
 [rpc_endpoints]
 # This section lives outside of profiles and defines a table of RPC endpoints, where the key specifies the RPC endpoints's name and the value is the RPC endpoint itself.

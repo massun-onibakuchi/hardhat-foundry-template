@@ -1,0 +1,155 @@
+{
+  "debugPrint": {
+    "prefix": "clo",
+    "body": ["console.log(\"${obj} :>>\", ${obj});"],
+    "description": "Log output"
+  },
+  "debugPrint2": {
+    "prefix": "clg",
+    "body": ["console.log(\"${obj} :>>\");"],
+    "description": "Log output"
+  },
+  "openzeppelinErc20": {
+    "prefix": "impzp",
+    "body": ["import \"@openzeppelin/contracts/${1:token/ERC20/IERC20}.sol\";"],
+    "description": "Import openzeppelin contracts"
+  },
+  "openzeppelinErc20Upgradeable": {
+    "prefix": "impzpu",
+    "body": ["import \"@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol\";"],
+    "description": "Import openzeppelin contracts"
+  },
+  "importLib": {
+    "prefix": "imp",
+    "body": ["import \"${1:@openzeppelin/contracts/token/ERC20/IERC20.sol}\";"],
+    "description": "Import lib"
+  },
+  "usingLib": {
+    "prefix": "usi",
+    "body": ["using ${1:SafeERC20} for ${2:IERC20};"],
+    "description": "Use lib for A"
+  },
+  "importForgeStd": {
+    "prefix": "impstd",
+    "body": ["import \"forge-std/Test.sol\";"],
+    "description": "Import console library"
+  },
+  "forgeConsole": {
+    "prefix": "impclo",
+    "body": ["import \"forge-std/console.sol\";"],
+    "description": "Import forge std console library"
+  },
+  "hardhatConsole": {
+    "prefix": "impclo",
+    "body": ["import \"hardhat/console.sol\";"],
+    "description": "Import hardhat console library"
+  },
+  "logNamedUint": {
+    "prefix": "log",
+    "body": ["emit log_named_uint(\"${1:obj} : >>\", ${1:obj});"],
+    "description": ""
+  },
+  "dsTestLog": {
+    "prefix": "log",
+    "body": ["emit log(${1:string});"],
+    "description": ""
+  },
+  "uintArray": {
+    "prefix": "uintarr",
+    "body": ["uint256[] ${1:memory} ${2:array} = new uint256[](${3:length});"],
+    "description": "init uint array"
+  },
+  "address": {
+    "prefix": "addr",
+    "body": ["address(${1:this})"],
+    "description": "address(this)"
+  },
+  "addressArray": {
+    "prefix": "addrarr",
+    "body": ["address[] ${1:memory} ${2:array} = new address[](${3:length});"],
+    "description": "init address array"
+  },
+  "array": {
+    "prefix": "arr",
+    "body": ["${1:uint256}[] ${2:memory} ${3:array} = new address[](${4:length});"],
+    "description": "init array"
+  },
+  "address This": {
+    "prefix": ["th", "thi"],
+    "body": ["address(this)"],
+    "description": "address this"
+  },
+  "safeTransfer": {
+    "prefix": ["tran", "safet", "safeT"],
+    "body": ["${1:underlying}.safeTransferFrom(${2:from}, ${3:to}, ${4:amount});"],
+    "description": "transfer from"
+  },
+  "balanceOf": {
+    "prefix": ["balof", "bal"],
+    "body": ["${1:underlying}.balanceOf(${2:account});"],
+    "description": "transfer from"
+  },
+  "safeApprove": {
+    "prefix": ["appr"],
+    "body": ["${1:underlying}.safeApprove(${2:spender},${3:allowance});"],
+    "description": "approve"
+  },
+  "deal": {
+    "prefix": "deal",
+    "body": ["deal(${1:token}, ${2: account}, ${3:amount}, true);"],
+    "description": "deal"
+  },
+  "viewFunc": {
+    "prefix": "viewfunc",
+    "body": ["function ${1:name}(${2:address} ${3:account}) public view ${5:returns (uint256)} {", "   ${6}", "}"]
+  },
+  "pubFunc": {
+    "prefix": "func",
+    "body": ["function ${1:name}(${2:address} ${3:account}) ${4:public} ${5:returns (uint256)} {", "   ${6}", "}"]
+  },
+  "IERC20Interface": {
+    "prefix": ["ier", "ierc", "IERC", "IE"],
+    "body": ["IERC20(${1:underlying})"],
+    "description": "Import openzeppelin contracts"
+  },
+  "pragma": {
+    "prefix": ["prag"],
+    "body": [
+      "// SPDX-License-Identifier: GPL-3.0-or-later",
+      "pragma solidity ^0.8.10;",
+      "",
+      "import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";",
+      ""
+    ]
+  },
+  "mockErc20": {
+    "prefix": "mockerc",
+    "body": [
+      "import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";",
+      "",
+      "contract ERC20Mock is ERC20 {",
+      "",
+      "constructor() ERC20(\"Test\",\"TEST\") {}",
+      "",
+      "function mint(address account, uint256 amount) public {",
+      "   _mint(account, amount);",
+      "}",
+      "",
+      "function burn(address account, uint256 amount) public {",
+      "   _burn(account, amount);",
+      "}",
+      "",
+      "}"
+    ]
+  },
+  "abiEncode": {
+    "prefix": "abi",
+    "body": ["abi.encodeWithSelector(${1:IERC20.balanceOf.selector}, ${2:address(this)})"],
+    "description": "abi encode"
+  },
+  "Create an event": {
+    "prefix": "event",
+    "body": ["event ${1:Name}(${2:Params});"],
+    "description": "Creates a Solidity event"
+  }
+}

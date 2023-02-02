@@ -18,6 +18,8 @@ out
 
 # VScode
 .vscode
+!vscode/*.code-snippets
+!.vscode/solidity.json
 
 # log
 *.log
